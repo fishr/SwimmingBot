@@ -1,0 +1,642 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ProxBand_Custom
+LIBS:SwimmingBotV0.1-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 4700 1000 0    100  ~ 0
+Wireless Power \nBattery Charging \nSubsystem
+Wire Notes Line
+	1200 3550 1200 5900
+Wire Notes Line
+	1200 5900 3150 5900
+Wire Notes Line
+	3150 5900 3150 3550
+Wire Notes Line
+	3150 3550 1200 3550
+Text Notes 1600 3500 0    60   ~ 0
+Adafruit Product #1407
+Text Notes 1350 5650 0    60   ~ 0
+12V\nIN
+Wire Notes Line
+	1600 5550 2800 5550
+Wire Notes Line
+	2800 5550 2800 5000
+Wire Notes Line
+	2800 5000 1700 5000
+Wire Notes Line
+	1700 5000 1700 5450
+Wire Notes Line
+	1700 5450 2700 5450
+Wire Notes Line
+	2700 5450 2700 5100
+Wire Notes Line
+	2700 5100 1800 5100
+Wire Notes Line
+	1800 5100 1800 5350
+Wire Notes Line
+	1800 5350 2600 5350
+Wire Notes Line
+	2600 5350 2600 5200
+Wire Notes Line
+	2600 5200 1900 5200
+Wire Notes Line
+	1750 4800 2750 4800
+Wire Notes Line
+	1900 4500 2600 4500
+Wire Notes Line
+	2600 4500 2600 4350
+Wire Notes Line
+	2600 4350 1900 4350
+Wire Notes Line
+	1900 4350 1900 4600
+Wire Notes Line
+	1900 4600 2750 4600
+Wire Notes Line
+	2750 4600 2750 4250
+Wire Notes Line
+	2750 4250 1800 4250
+Wire Notes Line
+	1800 4250 1800 4650
+Wire Notes Line
+	1800 4650 2800 4650
+Wire Notes Line
+	2800 4650 2800 4050
+Wire Notes Line
+	2800 4050 3400 4050
+Wire Notes Line
+	1950 4500 1950 3900
+Wire Notes Line
+	1950 3900 3400 3900
+$Comp
+L CONN_01X02 P3
+U 1 1 56CCCCE1
+P 3500 3950
+F 0 "P3" H 3500 4100 50  0000 C CNN
+F 1 "CHRG" V 3600 3950 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 3500 3950 50  0001 C CNN
+F 3 "" H 3500 3950 50  0000 C CNN
+	1    3500 3950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3700 3900 4100 3900
+Wire Wire Line
+	3700 4000 4000 4000
+Text Label 4000 3900 2    60   ~ 0
+5V_CHG
+$Comp
+L GND #PWR04
+U 1 1 56CCCE56
+P 4000 4050
+F 0 "#PWR04" H 4000 3800 50  0001 C CNN
+F 1 "GND" H 4000 3900 50  0000 C CNN
+F 2 "" H 4000 4050 50  0000 C CNN
+F 3 "" H 4000 4050 50  0000 C CNN
+	1    4000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4000 4000 4050
+Text Notes 1650 6100 0    60   ~ 0
+Wireless Power Transfer
+Wire Notes Line
+	5200 3550 5200 4650
+Wire Notes Line
+	5200 4650 5900 4650
+Wire Notes Line
+	5900 4650 5900 3550
+Wire Notes Line
+	5900 3550 5200 3550
+Text Notes 5450 3550 0    60   ~ 0
+Batt
+Wire Wire Line
+	5650 4100 6000 4100
+Wire Wire Line
+	5800 4100 5800 4200
+Wire Wire Line
+	5650 4000 6300 4000
+Text Label 6150 4000 2    60   ~ 0
+1S
+Text Label 5800 3800 2    60   ~ 0
+2S
+$Comp
+L GND #PWR05
+U 1 1 56CCD3F6
+P 5800 4200
+F 0 "#PWR05" H 5800 3950 50  0001 C CNN
+F 1 "GND" H 5800 4050 50  0000 C CNN
+F 2 "" H 5800 4200 50  0000 C CNN
+F 3 "" H 5800 4200 50  0000 C CNN
+	1    5800 4200
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	3800 5150 5850 5150
+Wire Notes Line
+	5850 5150 5850 7450
+Wire Notes Line
+	5850 7450 3800 7450
+Wire Notes Line
+	3800 7450 3800 5150
+Text Notes 4500 5100 0    60   ~ 0
+Batt Charger\nMCP73834T-FCI/MF
+Wire Wire Line
+	3650 7200 6000 7200
+Wire Wire Line
+	3550 5750 4150 5750
+Text Label 3550 5750 0    60   ~ 0
+5V_CHG
+$Comp
+L GND #PWR06
+U 1 1 56CCD61D
+P 3650 7300
+F 0 "#PWR06" H 3650 7050 50  0001 C CNN
+F 1 "GND" H 3650 7150 50  0000 C CNN
+F 2 "" H 3650 7300 50  0000 C CNN
+F 3 "" H 3650 7300 50  0000 C CNN
+	1    3650 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 7300 3650 7200
+Wire Wire Line
+	5600 5700 6150 5700
+Text Label 6150 5700 2    60   ~ 0
+1S
+Wire Notes Line
+	6800 3600 8200 3600
+Wire Notes Line
+	8200 3600 8200 6400
+Wire Notes Line
+	8200 6400 6800 6400
+Wire Notes Line
+	6800 6400 6800 3600
+Text Notes 7000 3550 0    60   ~ 0
+Battery Series/Parallel\nSwitch
+Text Notes 7000 5950 0    60   ~ 0
+nfet like Si1442DH
+Wire Wire Line
+	7950 5600 8750 5600
+Wire Wire Line
+	7650 5400 7250 5400
+Wire Wire Line
+	7650 5800 7200 5800
+$Comp
+L GND #PWR07
+U 1 1 56CCDFB0
+P 7200 6000
+F 0 "#PWR07" H 7200 5750 50  0001 C CNN
+F 1 "GND" H 7200 5850 50  0000 C CNN
+F 2 "" H 7200 6000 50  0000 C CNN
+F 3 "" H 7200 6000 50  0000 C CNN
+	1    7200 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 5800 7200 6000
+$Comp
+L CONN_01X04 P4
+U 1 1 56CCE113
+P 5450 3950
+F 0 "P4" H 5450 4200 50  0000 C CNN
+F 1 "BATT" V 5550 3950 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Angled_1x04" H 5450 3950 50  0001 C CNN
+F 3 "" H 5450 3950 50  0000 C CNN
+	1    5450 3950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5650 3900 6150 3900
+Text Label 6150 3900 2    60   ~ 0
+2S_NEG
+Text Label 7250 5400 0    60   ~ 0
+2S_NEG
+Text Notes 7100 5200 0    60   ~ 0
+Pfet like Si3407DV
+Wire Wire Line
+	7150 4700 7650 4700
+Text Label 7150 4700 0    60   ~ 0
+1S
+Wire Notes Line
+	8350 4800 8350 6400
+Wire Notes Line
+	8350 6400 9450 6400
+Wire Notes Line
+	9450 6400 9450 4800
+Wire Notes Line
+	9450 4800 8350 4800
+Text Notes 8550 4750 0    60   ~ 0
+Switching delay
+Wire Wire Line
+	7950 4900 8750 4900
+Wire Wire Line
+	9400 5400 9900 5400
+Text Label 9900 5400 2    60   ~ 0
+2S_EN
+Text Notes 7100 4600 0    60   ~ 0
+CAUTION - BODY DIODE CANNOT SHORT 1S to 2S
+Wire Wire Line
+	6950 4050 7650 4050
+Text Label 6950 4050 0    60   ~ 0
+2S
+Text Label 7150 4450 0    60   ~ 0
+1S
+Wire Wire Line
+	7150 4450 7650 4450
+Text Notes 7150 3850 0    60   ~ 0
+nfet like Si1442DH
+Wire Wire Line
+	7950 4250 8100 4250
+Wire Wire Line
+	8100 4250 8100 5600
+Connection ~ 8100 5600
+$Comp
+L R R5
+U 1 1 56CDD58A
+P 8950 5100
+F 0 "R5" V 9030 5100 50  0000 C CNN
+F 1 "10k" V 8950 5100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 8880 5100 50  0001 C CNN
+F 3 "" H 8950 5100 50  0000 C CNN
+	1    8950 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R6
+U 1 1 56CDD5C7
+P 8950 5800
+F 0 "R6" V 9030 5800 50  0000 C CNN
+F 1 "10k" V 8950 5800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 8880 5800 50  0001 C CNN
+F 3 "" H 8950 5800 50  0000 C CNN
+	1    8950 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8800 5100 8800 4950
+Wire Wire Line
+	8800 4950 8700 4950
+Wire Wire Line
+	8700 4950 8700 4900
+Connection ~ 8700 4900
+Wire Wire Line
+	8800 5650 8800 5800
+Wire Wire Line
+	8800 5650 8700 5650
+Wire Wire Line
+	8700 5650 8700 5600
+Connection ~ 8700 5600
+Wire Wire Line
+	9050 4900 9100 4900
+Wire Wire Line
+	9100 4900 9100 5100
+Wire Wire Line
+	9050 5600 9100 5600
+Wire Wire Line
+	9100 5600 9100 5800
+Wire Wire Line
+	9100 5000 9400 5000
+Wire Wire Line
+	9400 5000 9400 5700
+Connection ~ 9100 5000
+Wire Wire Line
+	9400 5700 9100 5700
+Connection ~ 9400 5400
+Connection ~ 9100 5700
+Connection ~ 8650 5600
+Wire Wire Line
+	8650 5600 8650 5700
+Connection ~ 8650 4900
+Wire Wire Line
+	8650 4900 8650 4950
+$Comp
+L GND #PWR08
+U 1 1 56CDD8C1
+P 8650 6050
+F 0 "#PWR08" H 8650 5800 50  0001 C CNN
+F 1 "GND" H 8650 5900 50  0000 C CNN
+F 2 "" H 8650 6050 50  0000 C CNN
+F 3 "" H 8650 6050 50  0000 C CNN
+	1    8650 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 6050 8650 6000
+$Comp
+L C C7
+U 1 1 56CDD558
+P 8650 5850
+F 0 "C7" H 8675 5950 50  0000 L CNN
+F 1 "1nF" H 8675 5750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 8688 5700 50  0001 C CNN
+F 3 "" H 8650 5850 50  0000 C CNN
+	1    8650 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 56CDD894
+P 8650 5300
+F 0 "#PWR09" H 8650 5050 50  0001 C CNN
+F 1 "GND" H 8650 5150 50  0000 C CNN
+F 2 "" H 8650 5300 50  0000 C CNN
+F 3 "" H 8650 5300 50  0000 C CNN
+	1    8650 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 5300 8650 5250
+$Comp
+L C C6
+U 1 1 56CDD531
+P 8650 5100
+F 0 "C6" H 8675 5200 50  0000 L CNN
+F 1 "1nF" H 8675 5000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 8688 4950 50  0001 C CNN
+F 3 "" H 8650 5100 50  0000 C CNN
+	1    8650 5100
+	1    0    0    -1  
+$EndComp
+Text Notes 10050 5350 0    60   ~ 0
+may want buffering
+Text HLabel 9750 5500 2    60   Input ~ 0
+2S_EN
+Wire Wire Line
+	9750 5500 9750 5400
+Connection ~ 9750 5400
+Text HLabel 6000 4100 2    60   Input ~ 0
+GND
+Connection ~ 5800 4100
+Text HLabel 6300 4000 2    60   Input ~ 0
+1S
+Text HLabel 6550 3800 2    60   Input ~ 0
+2S
+Text HLabel 4100 3900 2    60   Input ~ 0
+5V_CHG
+$Comp
+L MCP73834 U2
+U 1 1 571212EF
+P 4800 6350
+F 0 "U2" H 4800 6350 60  0000 C CNN
+F 1 "MCP73834" H 4800 6650 60  0000 C CNN
+F 2 "Custom_Footprints:DFN-10-THERM-.5MM" H 4800 5350 60  0001 C CNN
+F 3 "" H 4800 5350 60  0000 C CNN
+	1    4800 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 6250 5450 6150
+Wire Wire Line
+	5600 5700 5600 6150
+Wire Wire Line
+	5600 6150 5450 6150
+Connection ~ 5450 6150
+Wire Wire Line
+	4150 5750 4150 6250
+Connection ~ 4150 6150
+$Comp
+L C C4
+U 1 1 57121D28
+P 5750 5900
+F 0 "C4" H 5775 6000 50  0000 L CNN
+F 1 "1uF" H 5775 5800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 5788 5750 50  0001 C CNN
+F 3 "" H 5750 5900 50  0000 C CNN
+	1    5750 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5750 5750 5700
+Connection ~ 5750 5700
+Wire Wire Line
+	5750 6050 5750 7200
+Connection ~ 5750 7200
+Wire Wire Line
+	4150 6550 4150 7200
+Connection ~ 4150 7200
+$Comp
+L C C2
+U 1 1 57122011
+P 3950 5950
+F 0 "C2" H 3975 6050 50  0000 L CNN
+F 1 "1uF" H 3975 5850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 3988 5800 50  0001 C CNN
+F 3 "" H 3950 5950 50  0000 C CNN
+	1    3950 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 5800 3950 5750
+Connection ~ 3950 5750
+Wire Wire Line
+	3950 6100 3950 6550
+Wire Wire Line
+	3950 6550 4150 6550
+Connection ~ 4150 6550
+Text HLabel 4100 6350 0    60   Input ~ 0
+CHG_STAT1
+Text HLabel 4100 6450 0    60   Input ~ 0
+CHG_STAT2
+Wire Wire Line
+	4100 6350 4150 6350
+Wire Wire Line
+	4100 6450 4150 6450
+Text HLabel 5500 6450 2    60   Input ~ 0
+CHG_TE#
+Wire Wire Line
+	5500 6450 5450 6450
+$Comp
+L R R1
+U 1 1 57122A52
+P 4750 6750
+F 0 "R1" V 4830 6750 50  0000 C CNN
+F 1 "10k" V 4750 6750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 4680 6750 50  0001 C CNN
+F 3 "" H 4750 6750 50  0000 C CNN
+	1    4750 6750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 6550 5450 6750
+Wire Wire Line
+	5450 6750 4900 6750
+Wire Wire Line
+	4600 6750 4150 6750
+Connection ~ 4150 6750
+$Comp
+L R R2
+U 1 1 5712392A
+P 4750 6900
+F 0 "R2" V 4830 6900 50  0000 C CNN
+F 1 "10k" V 4750 6900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 4680 6900 50  0001 C CNN
+F 3 "" H 4750 6900 50  0000 C CNN
+	1    4750 6900
+	0    1    1    0   
+$EndComp
+Connection ~ 4600 6750
+Wire Wire Line
+	5450 6350 5600 6350
+Wire Wire Line
+	5600 6350 5600 6900
+Wire Wire Line
+	5600 6900 4900 6900
+Text HLabel 5500 6550 2    60   Input ~ 0
+CHG_EN#
+Wire Wire Line
+	5500 6550 5450 6550
+Wire Wire Line
+	4600 6900 4600 6750
+$Comp
+L JUMPER P5
+U 1 1 57125425
+P 6150 3800
+F 0 "P5" H 6150 3950 50  0000 C CNN
+F 1 "DEBUG_JUMPER" H 6500 3900 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 6150 3800 50  0001 C CNN
+F 3 "" H 6150 3800 50  0000 C CNN
+	1    6150 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3800 5850 3800
+$Comp
+L Q_NMOS_DGS Q1
+U 1 1 5738E87E
+P 7750 4250
+F 0 "Q1" H 8050 4300 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 8400 4200 50  0000 R CNN
+F 2 "Custom_Footprints:SC-70-6-DGS" H 7950 4350 50  0001 C CNN
+F 3 "" H 7750 4250 50  0000 C CNN
+	1    7750 4250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q3
+U 1 1 5738F18A
+P 7750 5600
+F 0 "Q3" H 8050 5650 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 8400 5550 50  0000 R CNN
+F 2 "Custom_Footprints:SC-70-6-DGS" H 7950 5700 50  0001 C CNN
+F 3 "" H 7750 5600 50  0000 C CNN
+	1    7750 5600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_DGS Q2
+U 1 1 5738F2AE
+P 7750 4900
+F 0 "Q2" H 8050 4950 50  0000 R CNN
+F 1 "Q_PMOS_DGS" H 8400 4850 50  0000 R CNN
+F 2 "Custom_Footprints:TSOP-6_Si3407DV" H 7950 5000 50  0001 C CNN
+F 3 "" H 7750 4900 50  0000 C CNN
+	1    7750 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7650 5100 7650 5400
+Connection ~ 7650 5400
+Text Notes 9250 4900 0    60   ~ 0
+LOW forward voltage drop~!\n\nDB2U308
+$Comp
+L D_Schottky D2
+U 1 1 574EE7E0
+P 8900 4900
+F 0 "D2" H 8900 5000 50  0000 C CNN
+F 1 "D_Schottky" H 8900 4800 50  0000 C CNN
+F 2 "Custom_Footprints:D_0402_SOD_923" H 8900 4900 50  0001 C CNN
+F 3 "" H 8900 4900 50  0000 C CNN
+	1    8900 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky D3
+U 1 1 574EE8F3
+P 8900 5600
+F 0 "D3" H 8900 5700 50  0000 C CNN
+F 1 "D_Schottky" H 8900 5500 50  0000 C CNN
+F 2 "Custom_Footprints:D_0402_SOD_923" H 8900 5600 50  0001 C CNN
+F 3 "" H 8900 5600 50  0000 C CNN
+	1    8900 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG010
+U 1 1 57591160
+P 4050 3900
+F 0 "#FLG010" H 4050 3995 50  0001 C CNN
+F 1 "PWR_FLAG" H 4050 4080 50  0000 C CNN
+F 2 "" H 4050 3900 50  0000 C CNN
+F 3 "" H 4050 3900 50  0000 C CNN
+	1    4050 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 4050 3900
+$Comp
+L PWR_FLAG #FLG011
+U 1 1 57594C3B
+P 5700 3800
+F 0 "#FLG011" H 5700 3895 50  0001 C CNN
+F 1 "PWR_FLAG" H 5700 3980 50  0000 C CNN
+F 2 "" H 5700 3800 50  0000 C CNN
+F 3 "" H 5700 3800 50  0000 C CNN
+	1    5700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG012
+U 1 1 57594C80
+P 6250 4000
+F 0 "#FLG012" H 6250 4095 50  0001 C CNN
+F 1 "PWR_FLAG" H 6250 4180 50  0000 C CNN
+F 2 "" H 6250 4000 50  0000 C CNN
+F 3 "" H 6250 4000 50  0000 C CNN
+	1    6250 4000
+	1    0    0    -1  
+$EndComp
+Connection ~ 6250 4000
+Connection ~ 5700 3800
+Wire Wire Line
+	6550 3800 6450 3800
+$EndSCHEMATC
