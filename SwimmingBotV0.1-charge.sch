@@ -158,7 +158,7 @@ Wire Wire Line
 	5650 4000 6300 4000
 Text Label 6150 4000 2    60   ~ 0
 1S
-Text Label 5800 3800 2    60   ~ 0
+Text Label 6500 3800 2    60   ~ 0
 2S
 $Comp
 L GND #PWR05
@@ -639,4 +639,6 @@ Connection ~ 6250 4000
 Connection ~ 5700 3800
 Wire Wire Line
 	6550 3800 6450 3800
+Text Label 5800 3800 0    60   ~ 0
+2S_RAW
 $EndSCHEMATC
