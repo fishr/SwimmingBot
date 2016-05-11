@@ -646,4 +646,6 @@ Text HLabel 8150 4300 2    60   Input ~ 0
 3.3V
 Text Notes 5950 5200 0    60   ~ 0
 Flash
+Text Notes 900  750  0    200  ~ 0
+REV2 QUESTION:  DO I REALLY NEED PARALLEL FLASH?
 $EndSCHEMATC

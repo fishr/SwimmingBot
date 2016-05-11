@@ -480,11 +480,11 @@ Text Label 7650 1700 2    60   ~ 0
 MOT1_CS#
 Text Label 7650 1800 2    60   ~ 0
 MOT2_CS#
-Text Label 4400 6200 2    60   ~ 0
+Text Label 4400 6900 2    60   ~ 0
 MOT2_CS#
-Text Label 4400 6100 2    60   ~ 0
+Text Label 4400 7100 2    60   ~ 0
 MOT1_CS#
-Text Label 6550 5850 0    60   ~ 0
+Text Label 4400 7400 2    60   ~ 0
 RF_CRESP#
 Text Label 9900 1800 2    60   ~ 0
 RF_EX
@@ -494,11 +494,11 @@ Text Label 9900 2100 2    60   ~ 0
 RF_PWR_DWN#
 Text Label 9900 1650 2    60   ~ 0
 RF_CRESP#
-Text Label 6550 5950 0    60   ~ 0
+Text Label 4400 7500 2    60   ~ 0
 RF_EX
-Text Label 6550 6050 0    60   ~ 0
+Text Label 6550 6500 0    60   ~ 0
 RF_CMD#
-Text Label 6550 6150 0    60   ~ 0
+Text Label 6550 6600 0    60   ~ 0
 RF_PWR_DWN#
 Text Label 9450 4950 2    60   ~ 0
 GYRO_INT
@@ -506,7 +506,7 @@ Text Label 9450 5050 2    60   ~ 0
 GYRO_FSYNC
 Text Label 6550 6350 0    60   ~ 0
 GYRO_FSYNC
-Text Label 6550 6250 0    60   ~ 0
+Text Label 4400 6100 2    60   ~ 0
 GYRO_INT
 Text Label 7650 1400 2    60   ~ 0
 MOSI
@@ -516,7 +516,7 @@ Text Label 6550 1950 0    60   ~ 0
 MISO
 Text Label 3600 1000 0    60   ~ 0
 3.3V_EN
-Text Label 4400 6850 2    60   ~ 0
+Text Label 6550 6800 0    60   ~ 0
 3.3V_EN
 NoConn ~ 4400 5700
 NoConn ~ 4400 5950
@@ -524,9 +524,9 @@ Text Label 7650 2000 2    60   ~ 0
 MOT1_RST#
 Text Label 7650 2100 2    60   ~ 0
 MOT2_RST#
-Text Label 4400 6300 2    60   ~ 0
+Text Label 6550 5850 0    60   ~ 0
 MOT1_RST#
-Text Label 4400 6400 2    60   ~ 0
+Text Label 6550 6050 0    60   ~ 0
 MOT2_RST#
 Text Label 2700 3300 0    60   ~ 0
 FLASH_RST#
@@ -540,13 +540,13 @@ Text Label 1750 2100 0    60   ~ 0
 CHG_TE#
 Text Label 1750 2200 0    60   ~ 0
 CHG_EN#
-Text Label 4400 7000 2    60   ~ 0
-CHG_STAT1
-Text Label 4400 7100 2    60   ~ 0
-CHG_STAT2
-Text Label 4400 7200 2    60   ~ 0
-CHG_TE#
 Text Label 4400 7300 2    60   ~ 0
+CHG_STAT1
+Text Label 6550 6700 0    60   ~ 0
+CHG_STAT2
+Text Label 6550 6150 0    60   ~ 0
+CHG_TE#
+Text Label 4400 7200 2    60   ~ 0
 CHG_EN#
 Text Label 9450 5350 2    60   ~ 0
 SD_CMD
@@ -564,13 +564,13 @@ Text Label 9450 5250 2    60   ~ 0
 SD_CD
 Text Label 9450 5650 2    60   ~ 0
 SD_DETECT
-Text Label 6550 6500 0    60   ~ 0
+Text Label 4400 6400 2    60   ~ 0
 SD_CD
-Text Label 6550 6600 0    60   ~ 0
+Text Label 4400 6500 2    60   ~ 0
 SD_DETECT
 Text Label 1750 1100 0    60   ~ 0
 2S_EN
-Text Label 4400 7400 2    60   ~ 0
+Text Label 6550 6250 0    60   ~ 0
 2S_EN
 $Sheet
 S 4400 600  2150 7100
@@ -678,17 +678,17 @@ F99 "PG7" I R 6550 6600 60
 F100 "PA12" I L 4400 6700 60 
 F101 "PC10" I R 6550 6150 60 
 F102 "PC12" I R 6550 6250 60 
-F103 "PD3" I L 4400 6850 60 
-F104 "PG11" I R 6550 6700 60 
-F105 "PG12" I R 6550 6800 60 
-F106 "PG13" I R 6550 6900 60 
-F107 "PG14" I R 6550 7000 60 
-F108 "PB7" I L 4400 7100 60 
-F109 "PB0" I L 4400 7000 60 
-F110 "A0" I R 6550 7150 60 
-F111 "A1" I R 6550 7250 60 
-F112 "A2" I R 6550 7350 60 
-F113 "A3" I R 6550 7450 60 
+F103 "PG11" I R 6550 6700 60 
+F104 "PG12" I R 6550 6800 60 
+F105 "PG13" I R 6550 6900 60 
+F106 "PG14" I R 6550 7000 60 
+F107 "PB0" I L 4400 6900 60 
+F108 "A0" I R 6550 7150 60 
+F109 "A1" I R 6550 7250 60 
+F110 "A2" I R 6550 7350 60 
+F111 "A3" I R 6550 7450 60 
+F112 "PB11" I L 4400 7000 60 
+F113 "PB10" I L 4400 7100 60 
 $EndSheet
 $Comp
 L CONN_02X06 P1
@@ -741,30 +741,26 @@ Wire Wire Line
 	7200 1150 7100 1150
 Text Label 7100 1250 0    60   ~ 0
 GND
-Text Label 6550 6700 0    60   ~ 0
+Text Label 4400 6200 2    60   ~ 0
 EXT1
-Text Label 6550 6800 0    60   ~ 0
+Text Label 4400 6300 2    60   ~ 0
 EXT2
 Text Label 7450 5150 2    60   ~ 0
 EXT1
 Text Label 7750 5150 2    60   ~ 0
 EXT2
-Text Label 8300 6050 0    60   ~ 0
-GEN_3.3V
 Text Label 8850 1400 0    60   ~ 0
 MOT1_DIAG
 Text Label 8850 1500 0    60   ~ 0
 MOT2_DIAG
-Text Label 4400 6500 2    60   ~ 0
+Text Label 4400 7000 2    60   ~ 0
 MOT1_DIAG
-Text Label 4400 7500 2    60   ~ 0
+Text Label 6550 5950 0    60   ~ 0
 MOT2_DIAG
 Text Label 1750 1700 0    60   ~ 0
 5V_CHG
 Text Label 6550 7000 0    60   ~ 0
 5V_CHG
-Text Label 8300 5750 0    60   ~ 0
-VBAT
 Text Label 8300 5400 0    60   ~ 0
 SDA
 Text Label 8300 5550 0    60   ~ 0
@@ -800,28 +796,6 @@ F 1 "SCL" H 8300 5750 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 8500 5550 50  0001 C CNN
 F 3 "" H 8500 5550 50  0000 C CNN
 	1    8300 5550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L TEST_1P W6
-U 1 1 575A4CA1
-P 8300 5750
-F 0 "W6" H 8300 6020 50  0000 C CNN
-F 1 "VBAT" H 8300 5950 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 8500 5750 50  0001 C CNN
-F 3 "" H 8500 5750 50  0000 C CNN
-	1    8300 5750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L TEST_1P W7
-U 1 1 575A520C
-P 8300 6050
-F 0 "W7" H 8300 6320 50  0000 C CNN
-F 1 "AUX_3.3V" H 8300 6250 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 8500 6050 50  0001 C CNN
-F 3 "" H 8500 6050 50  0000 C CNN
-	1    8300 6050
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -877,8 +851,6 @@ Wire Wire Line
 	7450 4850 7450 4800
 Wire Wire Line
 	7750 4850 7750 4800
-Text Label 8300 6350 0    60   ~ 0
-GND
 Wire Wire Line
 	6600 7250 6550 7250
 Wire Wire Line
@@ -887,17 +859,6 @@ Wire Wire Line
 	6600 7450 6550 7450
 Text Label 2600 1050 2    60   ~ 0
 GEN_3.3V
-$Comp
-L TEST_1P W3
-U 1 1 57400D21
-P 8300 6350
-F 0 "W3" H 8300 6620 50  0000 C CNN
-F 1 "GND" H 8300 6550 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 8500 6350 50  0001 C CNN
-F 3 "" H 8500 6350 50  0000 C CNN
-	1    8300 6350
-	0    -1   -1   0   
-$EndComp
 Text Label 6600 7550 0    60   ~ 0
 GND
 Wire Wire Line

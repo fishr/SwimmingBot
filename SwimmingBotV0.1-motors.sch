@@ -34,7 +34,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 8
+Sheet 4 8
 Title ""
 Date ""
 Rev ""
@@ -74,17 +74,17 @@ Wire Wire Line
 	8600 1400 8400 1400
 Wire Wire Line
 	8600 1500 8400 1500
-Text Label 8400 750  0    60   ~ 0
+Text Label 8400 950  0    60   ~ 0
 A1
 Text Label 8400 850  0    60   ~ 0
 B1
-Text Label 8400 950  0    60   ~ 0
+Text Label 8400 750  0    60   ~ 0
 C1
-Text Label 8400 1500 0    60   ~ 0
+Text Label 8400 1300 0    60   ~ 0
 C2
 Text Label 8400 1400 0    60   ~ 0
 B2
-Text Label 8400 1300 0    60   ~ 0
+Text Label 8400 1500 0    60   ~ 0
 A2
 Text Label 7100 5400 1    60   ~ 0
 C2

@@ -34,7 +34,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 8
+Sheet 7 8
 Title ""
 Date ""
 Rev ""
@@ -225,7 +225,7 @@ Text HLabel 7900 2700 2    60   Input ~ 0
 DCMI_D3
 Text HLabel 7050 1300 1    60   Input ~ 0
 DCMI_D4
-Text HLabel 4650 1300 1    60   Input ~ 0
+Text HLabel 6550 1300 1    60   Input ~ 0
 DCMI_D5
 Text HLabel 4350 1300 1    60   Input ~ 0
 DCMI_D6
@@ -502,9 +502,9 @@ Wire Wire Line
 	4150 1350 4150 1300
 Wire Wire Line
 	4050 1350 4050 1300
-Text Label 7050 5800 3    60   ~ 0
+Text Label 4650 1300 1    60   ~ 0
 SCL
-Text Label 7150 5800 3    60   ~ 0
+Text Label 4550 1300 1    60   ~ 0
 SDA
 $Comp
 L R R12
@@ -789,8 +789,8 @@ Text HLabel 7150 1300 1    60   Input ~ 0
 PC10
 Text HLabel 6950 1300 1    60   Input ~ 0
 PC12
-Text HLabel 6550 1300 1    60   Input ~ 0
-PD3
+Text HLabel 7150 5800 3    60   Input ~ 0
+PB11
 Text HLabel 5650 1300 1    60   Input ~ 0
 PG11
 Text HLabel 5550 1300 1    60   Input ~ 0
@@ -799,8 +799,8 @@ Text HLabel 5450 1300 1    60   Input ~ 0
 PG13
 Text HLabel 5350 1300 1    60   Input ~ 0
 PG14
-Text HLabel 4550 1300 1    60   Input ~ 0
-PB7
+Text HLabel 7050 5800 3    60   Input ~ 0
+PB10
 $Comp
 L JUMPER JP1
 U 1 1 572DCA42
