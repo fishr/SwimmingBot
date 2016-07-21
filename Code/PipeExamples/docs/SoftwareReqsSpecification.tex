@@ -1,0 +1,257 @@
+\documentclass{scrreprt}
+\usepackage{listings}
+%\usepackage{underscore} %can fix issues with hyphenation after underscores
+\usepackage[bookmarks=true]{hyperref}
+
+\usepackage{enumitem}
+
+\AtBeginDocument{%
+	\renewcommand{\thelstlisting}{%
+		\ifnum\value{section}=0
+		\thechapter%
+		\else
+		\ifnum\value{subsection}=0
+		\thesection%
+		\else
+		\ifnum\value{subsubsection}=0
+		\thesubsection%
+		\else
+		\ifnum\value{paragraph}=0
+		\thesubsubsection%
+		\else
+		\ifnum\value{subparagraph}=0
+		\theparagraph%
+		\else
+		\thesubparagraph%
+		\fi
+		\fi
+		\fi
+		\fi
+		\fi
+	}
+}
+
+\setlist[enumerate,1]{label=\protect \thelstlisting.\arabic*.}
+\setlist[enumerate,2]{label*=\arabic*.}
+\setlist[enumerate,3]{label*=\arabic*.}
+\setlist[enumerate,4]{label*=\arabic*.}
+\setlist[enumerate,5]{label*=\arabic*.}
+
+%
+\hypersetup{
+	bookmarks=false,
+	pdftitle={Software Requirements Specification},
+	pdfauthor={Ryan Fish},
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=black,
+	filecolor=black,
+	urlcolor=purple,
+	linktocpage=page
+}%
+%
+\def\myversion{1.0}
+%
+\title{%
+	\flushright
+	\rule{16cm}{5pt}\vskip1cm
+	\Huge{SOFTWARE REQUIREMENTS\\ SPECIFICATION}\\
+	\vspace{2cm}
+	for\\
+	\vspace{2cm}
+	Autonomous Pipeline Inspection\\
+	\vspace{2cm}
+	by Ryan Fish
+	\vfill
+	\rule{16cm}{5pt}
+}
+
+\date{}
+
+\begin{document}
+	\setcounter{tocdepth}{3}
+	\setcounter{secnumdepth}{5}
+	\maketitle
+	\tableofcontents
+	
+	\chapter{Introduction}
+	\section{Revisions}
+	\section{Purpose}
+	\section{Project Scope}
+	\chapter{Software Specifications}
+	\section{Features}
+	\subsection{Core}
+	\subsubsection{GPIO}
+	\begin{enumerate}
+		\item B1: \autoref{TIM3CH4}\label{B1}
+		\item B5: \autoref{TIM3CH2}\label{B5}
+	\end{enumerate}
+	\subsubsection{Clocks}
+	\paragraph{System Clock}
+	\subparagraph{Speeds}
+	\begin{enumerate}
+		\item SYSCLK: 72MHz
+		\item HCLK Cortex Core Clock: 72MHz
+		\item FCLK Cortex Clock: 72MHz
+		\item PCLK1: 36MHz
+		\item PCLK2: 72MHz\label{PCLK2}
+	\end{enumerate}
+	\subparagraph{Settings}
+	\begin{enumerate}
+		\item System Clock Source: PLL
+		\item PLL Clock Source: HSE at 26MHz
+		\item PLLM: 13
+		\item PLLN: 72
+		\item PLLP: 2
+		\item PLLQ: 3
+		\item APB Prescaler1: ppre1 set to a divisor of 2
+		\item APB Prescaler2: ppre2 set to no divisor
+		\item AHB Prescaler: hpre set to no divisor
+		\item Flash Wait State: 3
+	\end{enumerate}
+	\subparagraph{Notes}
+	\begin{enumerate}
+		\item Flash Wait State shall be set to the HIGHEST functional value at all times.  This requires increasing it before setting sysclk to a higher frequency (source) and decreasing it after setting sysclk to a lower frequency (source).
+	\end{enumerate}
+	\paragraph{RTC}
+	\subparagraph{Speeds}
+	\begin{enumerate}
+		\item RTC speed: 32.768KHz
+	\end{enumerate}
+	\subparagraph{Settings}
+	\begin{enumerate}
+		\item LSE Mode: High Power mode
+		\item RTC Clock Source: LSE at 32.768 KHz
+	\end{enumerate}
+	\subparagraph{Notes}
+	\begin{enumerate}
+		\item Modifying LSE and RTC settings are sometimes in a set of protected registers.  The PWR/BACKUP domain has a protection mechanism to prevent accidental writing.  Must disable writing protection, reset the domain, disable writing protection again, write settings, verify the clock is running properly, then re-enable write protection for safety.
+	\end{enumerate}
+	\paragraph{Systick}
+	\begin{enumerate}
+		\item Systick shall run at 1000Hz \label{systick_freq}
+		\item The Systick source shall be AHB, not AHB/8\label{systick_source}
+		\item The reload counter shall be set to 72000 to comply with \autoref{systick_freq}\label{systick_counter}
+		\item \autoref{systick_freq} shall be defined in the FreeRTOSConfig.h file as configTICK\_RATE\_HZ.  The FreeRTOS system will automatically select the counter value for \autoref{systick_counter}.
+	\end{enumerate}
+	\paragraph{Periph Clocks}
+	\begin{enumerate}
+		\item Port A peripheral clock shall always be on to run the ADCs, primarily for battery monitoring
+		\item Port B periph clock shall be on if FMC, MEMS, Fin, Motor, Charge or RF is needed
+		\item Port C periph clock shall always be on to control battery series-ing
+		\item Port D periph clock shall be on if FMC is active
+		\item Port E periph clock shall be on if FMC is active
+		\item Port F periph clock shall be on if FMC, LEDs, MEMS or SD is active
+		\item Port G periph clock shall always be on for power system control
+		\item Port H periph clock shall always be off
+		\item SPI1 periph clock shall be on if motors are needed
+		\item TIM3 periph clock shall be on if motors are needed
+	\end{enumerate}
+	\subsubsection{Timers}
+	\paragraph{TIM3}
+	\subparagraph{Settings}
+	\begin{enumerate}
+		\item Source clock is \autoref{PCLK2}.
+		\item CH2 is MOT1\_PWM, on \autoref{B5} \label{TIM3CH2}
+		\item CH4 is MOT2\_PWM, on \autoref{B1} \label{TIM3CH4}
+		\item The channels shall both be set to PWM1 mode
+		\item The channels both shall have their initial compare values set to 0.
+		\item AutoReload is set to 0x44AA
+		\item Prescaler register set to 0x0, prescaler value is reg+1, so effectively 1
+		\item If \autoref{PCLK2} is 72MHz, PWM frequency is $72$MHz$/(17578)=4096.029$Hz
+		\item The timer shall be set with edge, up count and internal clock w/o divider
+		\item Preloader needs to be enabled on both output channels and autoreload per the data sheet
+		\item Should PWM changes be needed within $1/4096$ seconds, modify the relevant registers then generate a software update event by setting TIM\_EGR\_UG.
+		\item The channels shall be enabled before the timer counter.
+	\end{enumerate}
+	\subsubsection{Power Modes}
+	\paragraph{Startup}
+	\begin{enumerate}
+		\item The processor shall remain in full power during the entirety of startup
+	\end{enumerate}
+	\paragraph{Run}
+	\begin{enumerate}
+		\item The processor will remain in full power mode, though is not required to.  Changes will require consulting the FreeRTOS manual on power modes.
+	\end{enumerate}
+	
+	\subsection{Drivers}
+	\subsubsection{A4960}
+	\paragraph{Settings}
+	\begin{enumerate}
+		\item The DIAG pin shall be kept in the POR default of Fault Flag, and potentially an interrupt source.  The latest SPI data may be examined for faults upon triggering.
+		\item Initially, we'll try it with ESF bit set, so faults are latched until the Diagnostic register is reset.  This disables the FETs.
+		\item HQ[3:0] (torque given to initial startup positioning) should be maxed
+		\item HT[3:0] (time given to initial positioning) should be maxed
+		\item RQ[3:0] (torque given to initial startup ramp for BEMF detection) should be maxed
+		\item SC[3:0] (initial speed for startup ramp) should be minimum
+		\item EC[3:0] (end speed of ramp) may need adjusting
+		\item RR[3:0] (ramp rate) may need adjusting
+	\end{enumerate}
+	\paragraph{Notes}
+	\subparagraph{SPI}
+	\begin{enumerate}
+		\item A short startup period must be allowed before checking for fault flags.  Bootstrap caps take a second to come up to full 13v charge.
+		\item FF (first bit received of every transaction) goes to one if a new fault has occurred since last transaction, or a fault has continued since last transaction.
+		\item POR (second bit of every tx/rx) indicates whether a POR just happened.
+		\item VR (third bit of every transaction) indicates whether the bootstrap caps are charged or not
+		\item 16 bit words
+		\item first 3 bits sent are register address
+		\item first 3 bits received are FF, POR, VR from Diagnostic reg
+		\item next bit sent is write-enable bit for the selected register
+		\item next bit received is undefined, likely to be 0
+		\item if write-enable bit was 0, the next 12 bits written are ignored
+		\item if write-enable bit was 0, the next 12 bits read are the register that was selected
+		\item if write-enable bit was 1, the next 12 bits written are written to the selected register
+		\item if write-enable bit was 1, the next 12 bits received are the rest of the Diagnostic reg
+		\item thus the only way to safely read the entire diagnostic reg is by reading a register that won't change (too quickly) and writing its contents back in.
+	\end{enumerate}
+	\subparagraph{DIAG pin}
+	\begin{enumerate}
+		\item When DIAG pin is set as Sensorless Operation Indicator, it goes high once proper sensorless rotation is achieved, and goes low if such condition fails.  If RUN is set to 0 or BRK is set to 1, it left at what it was prior (I think).
+	\end{enumerate}
+	\subsubsection{IMU}
+	
+	\subsection{Navigation}
+	
+	\subsection{Communication}
+	\subsubsection{SPI}
+	\paragraph{Settings}
+	\begin{enumerate}
+		\item CPOL: 1, clock high on idle
+		\item CPHA: data clocked on rising edge (first bit, clock goes low from idle, then clocks in bit on rising edge)
+		\item BR: A4960s cannot take more than 1MBPS.  The prescaler is fed by \autoref{PCLK2}, so the minimum divisor is 128\label{A4960MAXSPI}.  BR bits should be set to 6.
+		\item Datasheet specifies master to multi slave mode must set SSM and SSI bits.
+	\end{enumerate}
+	\paragraph{Notes}
+	\begin{enumerate}
+		\item Slave select to A4960s MUST go high between words.
+		\item For A4960s, a word is 2 bytes
+		\item Page 860 and on has important info for init steps and de-init steps, esp. as apply to going to low power mode
+	\end{enumerate}
+	\subsubsection{Radio}
+	\paragraph{Notes}
+	\begin{enumerate}
+		\item Communication should probably consist mostly of coordinates going into the bot, except in error cases when faults are sent back out
+		\item DATA\_OUT sends data as soon as its received
+		\item DATA\_IN sends data (assuming CMD\# is high) once enough has been buffered, or upon a SEND cmd or a few other conditions
+		\item may spontaneously send early
+		\item default is 1 start, 1 stop, 8 data, and no parity bits.  9600 baud (I think at POR)
+		\item command sequence is [0xFF][Length][Command]
+		\item escape char is 0xFE, values greater than 0x80 can be sent as [0xFE][value-0x80].  Only values 0xF0 and greater require escaping
+		\item Length should include escape bytes, but not header byte or length byte
+		\item a response is returned for all valid commands.  either CMD\_ACK [0x06] or CMD\_NACK [0x15] is sent first, then more may follow
+		\item reading a register is [0xFF][0x02][0xFE][reg] or [0xFF][0x03][0xFE][0xFE][reg-0x80]
+		\item writing a register is [0xFF][len][reg][val]  with escapes as needed if values are 0xF0 or greater
+		\item if CTS isn't connected, can wait for ACK to be received before sending next command.  The device receive buffer is 256 bytes, if it fills up the data is lost
+		\item Transmitter Device Serial NUmber (DSN) is in the MYDSN register.  32 bit number, so 4- 8-bit registers.
+		\item point to point comms is enabled by putting the other point in the origin's DESTDSN registers.
+		\item Setting ADDMODE register to 0x14 uses DSN addressing with ACK
+		\item Due to a clash of priorities between buffers and interrupts and having to use the CMD# pin synchronously with outgoing data, we're going to try to only setup the module once, then act as a transparent UART bridge thereafter.
+		\item the CMDHOLD option should be enabled
+		\item CRESP# stays in the same state until a change is required
+	\end{enumerate}
+	\section{Functions}
+	
+	\section{Objects}
+	
+\end{document}
