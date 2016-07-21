@@ -194,18 +194,11 @@ F 3 "" H 6750 4200 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6150 4200 6050 4200
-Wire Wire Line
-	6050 4200 6050 3850
-Connection ~ 6050 3850
-Wire Wire Line
 	6150 4100 5950 4100
 Wire Wire Line
 	5950 4100 5950 5000
 Connection ~ 5950 5000
-Wire Wire Line
-	6150 4400 6100 4400
-Text HLabel 6100 4400 0    60   Input ~ 0
+Text HLabel 6000 4600 0    60   Input ~ 0
 PROC_3.3V_EN
 $Comp
 L CP C61
@@ -440,7 +433,7 @@ F 3 "" H 5850 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 1800 5850 1800
+	5850 1800 6700 1800
 Wire Wire Line
 	6450 2100 5850 2100
 Connection ~ 6450 2000
@@ -468,4 +461,26 @@ F 3 "" H 10300 3850 50  0000 C CNN
 	1    10300 3850
 	1    0    0    -1  
 $EndComp
+$Comp
+L R R?
+U 1 1 57477723
+P 6300 4600
+F 0 "R?" V 6380 4600 50  0000 C CNN
+F 1 "10k" V 6300 4600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 6230 4600 50  0001 C CNN
+F 3 "" H 6300 4600 50  0000 C CNN
+	1    6300 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 4600 6150 4400
+Text Label 6450 4600 0    60   ~ 0
+1S
+Wire Wire Line
+	6000 4600 6150 4600
+Connection ~ 6150 4600
+Wire Wire Line
+	6150 4200 6050 4200
+Wire Wire Line
+	6050 4200 6050 3850
 $EndSCHEMATC

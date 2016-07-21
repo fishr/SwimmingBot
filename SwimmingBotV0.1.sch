@@ -913,7 +913,7 @@ L R R19
 U 1 1 575F2275
 P 7700 3950
 F 0 "R19" V 7780 3950 50  0000 C CNN
-F 1 "10k" V 7700 3950 50  0000 C CNN
+F 1 "4.1k-3.9k" V 7700 3950 50  0000 C CNN
 F 2 "Resistors_SMD:R_0402" V 7630 3950 50  0001 C CNN
 F 3 "" H 7700 3950 50  0000 C CNN
 	1    7700 3950
@@ -947,4 +947,8 @@ F 3 "" H 8500 4900 50  0000 C CNN
 	1    8300 4900
 	0    -1   -1   0   
 $EndComp
+Text Notes 7150 6300 0    60   ~ 0
+Note: PC13 is limited to an \ninput or v. weak output
+Text Notes 8000 3900 0    60   ~ 0
+gives 2.5v (vref) when\nvbat is 8.6 or so
 $EndSCHEMATC
