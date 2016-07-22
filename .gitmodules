@@ -1,0 +1,3 @@
+[submodule "Code/PipeExamples"]
+	path = Code/PipeExamples
+	url = git@github.mit.edu:MRL-Summer-UROPs/PipeExamples.git
