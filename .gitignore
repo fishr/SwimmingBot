@@ -1,4 +1,4 @@
 #ignoring KiCAD temp files
 *.bak
 *.kicad_pcb-bak
-
+Gerbs/
