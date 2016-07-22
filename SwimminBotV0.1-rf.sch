@@ -134,11 +134,8 @@ F 3 "" H 3250 4750 50  0000 C CNN
 $EndComp
 Text Label 3750 3000 0    60   ~ 0
 GND
-NoConn ~ 3350 2500
-NoConn ~ 3250 2500
 Text Notes 2950 1800 0    60   ~ 0
 call it 50mA
-NoConn ~ 3750 3100
 Wire Wire Line
 	3750 3700 3850 3700
 Wire Wire Line
@@ -176,4 +173,16 @@ Text Label 2000 5000 0    60   ~ 0
 3.3V
 Text Label 2000 5300 0    60   ~ 0
 GND
+Text HLabel 3800 3100 2    60   Input ~ 0
+RF_CTS
+Wire Wire Line
+	3750 3100 3800 3100
+Text HLabel 3350 2450 1    60   Input ~ 0
+RF_ACTV
+Wire Wire Line
+	3350 2500 3350 2450
+Text HLabel 3250 2450 1    60   Input ~ 0
+RF_TXE
+Wire Wire Line
+	3250 2500 3250 2450
 $EndSCHEMATC

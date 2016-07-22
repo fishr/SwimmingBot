@@ -112,8 +112,6 @@ Text Label 6150 5700 2    60   ~ 0
 1S
 Text Notes 7000 3550 0    60   ~ 0
 Battery Series/Parallel\nSwitch
-Text Notes 7000 5950 0    60   ~ 0
-nfet like Si1442DH
 $Comp
 L GND #PWR07
 U 1 1 56CCDFB0
@@ -140,92 +138,25 @@ Text Label 6150 3900 2    60   ~ 0
 2S_NEG
 Text Label 7250 5400 0    60   ~ 0
 2S_NEG
-Text Notes 7100 5200 0    60   ~ 0
-Pfet like Si3407DV
 Text Label 7150 4700 0    60   ~ 0
 1S
-Text Notes 8550 4750 0    60   ~ 0
-Switching delay
-Text Label 9900 5400 2    60   ~ 0
-2S_EN
 Text Notes 7100 4600 0    60   ~ 0
 CAUTION - BODY DIODE CANNOT SHORT 1S to 2S
 Text Label 6950 4050 0    60   ~ 0
 2S
 Text Label 7150 4450 0    60   ~ 0
 1S
-Text Notes 7150 3850 0    60   ~ 0
-nfet like Si1442DH
-$Comp
-L R R5
-U 1 1 56CDD58A
-P 8950 5100
-F 0 "R5" V 9030 5100 50  0000 C CNN
-F 1 "10k" V 8950 5100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 8880 5100 50  0001 C CNN
-F 3 "" H 8950 5100 50  0000 C CNN
-	1    8950 5100
-	0    1    1    0   
-$EndComp
-$Comp
-L R R6
-U 1 1 56CDD5C7
-P 8950 5800
-F 0 "R6" V 9030 5800 50  0000 C CNN
-F 1 "10k" V 8950 5800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 8880 5800 50  0001 C CNN
-F 3 "" H 8950 5800 50  0000 C CNN
-	1    8950 5800
-	0    1    1    0   
-$EndComp
 $Comp
 L GND #PWR08
 U 1 1 56CDD8C1
-P 8650 6050
-F 0 "#PWR08" H 8650 5800 50  0001 C CNN
-F 1 "GND" H 8650 5900 50  0000 C CNN
-F 2 "" H 8650 6050 50  0000 C CNN
-F 3 "" H 8650 6050 50  0000 C CNN
-	1    8650 6050
+P 8650 5650
+F 0 "#PWR08" H 8650 5400 50  0001 C CNN
+F 1 "GND" H 8650 5500 50  0000 C CNN
+F 2 "" H 8650 5650 50  0000 C CNN
+F 3 "" H 8650 5650 50  0000 C CNN
+	1    8650 5650
 	1    0    0    -1  
 $EndComp
-$Comp
-L C C7
-U 1 1 56CDD558
-P 8650 5850
-F 0 "C7" H 8675 5950 50  0000 L CNN
-F 1 "1nF" H 8675 5750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 8688 5700 50  0001 C CNN
-F 3 "" H 8650 5850 50  0000 C CNN
-	1    8650 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR09
-U 1 1 56CDD894
-P 8650 5300
-F 0 "#PWR09" H 8650 5050 50  0001 C CNN
-F 1 "GND" H 8650 5150 50  0000 C CNN
-F 2 "" H 8650 5300 50  0000 C CNN
-F 3 "" H 8650 5300 50  0000 C CNN
-	1    8650 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C6
-U 1 1 56CDD531
-P 8650 5100
-F 0 "C6" H 8675 5200 50  0000 L CNN
-F 1 "1nF" H 8675 5000 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 8688 4950 50  0001 C CNN
-F 3 "" H 8650 5100 50  0000 C CNN
-	1    8650 5100
-	1    0    0    -1  
-$EndComp
-Text Notes 10050 5350 0    60   ~ 0
-may want buffering
-Text HLabel 9750 5500 2    60   Input ~ 0
-2S_EN
 Text HLabel 6000 4100 2    60   Input ~ 0
 GND
 Text HLabel 6300 4000 2    60   Input ~ 0
@@ -318,41 +249,6 @@ F 3 "" H 7750 5600 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Q_PMOS_DGS Q2
-U 1 1 5738F2AE
-P 7750 4900
-F 0 "Q2" H 8050 4950 50  0000 R CNN
-F 1 "Q_PMOS_DGS" H 8400 4850 50  0000 R CNN
-F 2 "Custom_Footprints:TSOP-6_Si3407DV" H 7950 5000 50  0001 C CNN
-F 3 "" H 7750 4900 50  0000 C CNN
-	1    7750 4900
-	-1   0    0    1   
-$EndComp
-Text Notes 9250 4900 0    60   ~ 0
-LOW forward voltage drop~!\n\nDB2U308
-$Comp
-L D_Schottky D2
-U 1 1 574EE7E0
-P 8900 4900
-F 0 "D2" H 8900 5000 50  0000 C CNN
-F 1 "D_Schottky" H 8900 4800 50  0000 C CNN
-F 2 "Custom_Footprints:D_0402_SOD_923" H 8900 4900 50  0001 C CNN
-F 3 "" H 8900 4900 50  0000 C CNN
-	1    8900 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L D_Schottky D3
-U 1 1 574EE8F3
-P 8900 5600
-F 0 "D3" H 8900 5700 50  0000 C CNN
-F 1 "D_Schottky" H 8900 5500 50  0000 C CNN
-F 2 "Custom_Footprints:D_0402_SOD_923" H 8900 5600 50  0001 C CNN
-F 3 "" H 8900 5600 50  0000 C CNN
-	1    8900 5600
-	-1   0    0    1   
-$EndComp
-$Comp
 L PWR_FLAG #FLG010
 U 1 1 57591160
 P 4050 3900
@@ -388,16 +284,14 @@ $EndComp
 $Comp
 L R R?
 U 1 1 57478D73
-P 9600 5550
-F 0 "R?" V 9680 5550 50  0000 C CNN
-F 1 "10k" V 9600 5550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 9530 5550 50  0001 C CNN
-F 3 "" H 9600 5550 50  0000 C CNN
-	1    9600 5550
+P 8500 5450
+F 0 "R?" V 8580 5450 50  0000 C CNN
+F 1 "10k" V 8500 5450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 8430 5450 50  0001 C CNN
+F 3 "" H 8500 5450 50  0000 C CNN
+	1    8500 5450
 	-1   0    0    1   
 $EndComp
-Text Notes 9800 5900 0    60   ~ 0
-Replace with ic
 $Comp
 L R R?
 U 1 1 5790B62F
@@ -428,7 +322,6 @@ Wire Wire Line
 	4150 6550 4150 7200
 Wire Wire Line
 	5800 6550 5850 6550
-Connection ~ 8650 6000
 Wire Notes Line
 	1200 3550 1200 5900
 Wire Notes Line
@@ -532,8 +425,6 @@ Wire Notes Line
 Wire Notes Line
 	6800 6400 6800 3600
 Wire Wire Line
-	7950 5600 8750 5600
-Wire Wire Line
 	7650 5400 7250 5400
 Wire Wire Line
 	7650 5800 7200 5800
@@ -544,70 +435,11 @@ Wire Wire Line
 Wire Wire Line
 	7150 4700 7650 4700
 Wire Notes Line
-	8350 4800 8350 6400
-Wire Notes Line
 	8350 6400 9450 6400
-Wire Notes Line
-	9450 6400 9450 4800
-Wire Notes Line
-	9450 4800 8350 4800
-Wire Wire Line
-	7950 4900 8750 4900
-Wire Wire Line
-	9400 5400 9900 5400
 Wire Wire Line
 	6950 4050 7650 4050
 Wire Wire Line
 	7150 4450 7650 4450
-Wire Wire Line
-	7950 4250 8100 4250
-Wire Wire Line
-	8100 4250 8100 5600
-Connection ~ 8100 5600
-Wire Wire Line
-	8800 5100 8800 4950
-Wire Wire Line
-	8800 4950 8700 4950
-Wire Wire Line
-	8700 4950 8700 4900
-Connection ~ 8700 4900
-Wire Wire Line
-	8800 5650 8800 5800
-Wire Wire Line
-	8800 5650 8700 5650
-Wire Wire Line
-	8700 5650 8700 5600
-Connection ~ 8700 5600
-Wire Wire Line
-	9050 4900 9100 4900
-Wire Wire Line
-	9100 4900 9100 5100
-Wire Wire Line
-	9050 5600 9100 5600
-Wire Wire Line
-	9100 5600 9100 5800
-Wire Wire Line
-	9100 5000 9400 5000
-Wire Wire Line
-	9400 5000 9400 5700
-Connection ~ 9100 5000
-Wire Wire Line
-	9400 5700 9100 5700
-Connection ~ 9400 5400
-Connection ~ 9100 5700
-Connection ~ 8650 5600
-Wire Wire Line
-	8650 5600 8650 5700
-Connection ~ 8650 4900
-Wire Wire Line
-	8650 4900 8650 4950
-Wire Wire Line
-	8650 6050 8650 6000
-Wire Wire Line
-	8650 5300 8650 5250
-Wire Wire Line
-	9750 5500 9750 5400
-Connection ~ 9750 5400
 Connection ~ 5800 4100
 Wire Wire Line
 	5450 6150 5450 6250
@@ -654,11 +486,6 @@ Connection ~ 7650 5400
 Connection ~ 4050 3900
 Connection ~ 6250 4000
 Connection ~ 5700 3800
-Connection ~ 9600 5400
-Wire Wire Line
-	8650 6000 9600 6000
-Wire Wire Line
-	9600 6000 9600 5700
 Text Notes 1450 3200 0    60   ~ 0
 DIDN"T WORK\n\nMAGNETS ON OUTSIDE INSTEAD?
 Wire Notes Line
@@ -671,6 +498,111 @@ Wire Notes Line
 	2450 3300 2800 3300
 Wire Notes Line
 	2800 3300 2800 6350
-Text Notes 7850 4150 0    60   ~ 0
-can't get micro higher than 1s to turn this fet on duh
+Text Notes 9000 3750 0    100  ~ 0
+LTC 1163\n
+Text Notes 8700 3900 0    100  ~ 0
+Should sequence all three of these, \ndanger of short through top and \nmiddle fet from 2s to its own negative terminal
+$Comp
+L R R?
+U 1 1 5798EA84
+P 8300 5050
+F 0 "R?" V 8380 5050 50  0000 C CNN
+F 1 "10k" V 8300 5050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 8230 5050 50  0001 C CNN
+F 3 "" H 8300 5050 50  0000 C CNN
+	1    8300 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5798EADC
+P 8400 4900
+F 0 "R?" V 8480 4900 50  0000 C CNN
+F 1 "10k" V 8400 4900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 8330 4900 50  0001 C CNN
+F 3 "" H 8400 4900 50  0000 C CNN
+	1    8400 4900
+	-1   0    0    1   
+$EndComp
+Text Label 8350 4700 0    60   ~ 0
+1S
+$Comp
+L LTC1163 U?
+U 1 1 5798EFC2
+P 9100 5300
+F 0 "U?" H 9100 5700 100 0000 C CNN
+F 1 "LTC1163" H 9100 5850 100 0000 C CNN
+F 2 "" H 9100 5300 100 0000 C CNN
+F 3 "" H 9100 5300 100 0000 C CNN
+	1    9100 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 5400 8650 5650
+Wire Wire Line
+	8500 5600 8650 5600
+Connection ~ 8650 5600
+Wire Wire Line
+	8650 5100 8400 5100
+Wire Wire Line
+	8400 5100 8400 5050
+Wire Wire Line
+	8350 5300 8650 5300
+Wire Wire Line
+	8250 5200 8650 5200
+Wire Wire Line
+	8300 4900 8300 4700
+Wire Wire Line
+	8300 4700 8400 4700
+Wire Wire Line
+	8400 4700 8400 4750
+Connection ~ 8350 4700
+$Comp
+L Q_NMOS_DGS Q?
+U 1 1 5798F6B7
+P 7750 4900
+F 0 "Q?" H 8050 4950 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 8400 4850 50  0000 R CNN
+F 2 "Custom_Footprints:SC-70-6-DGS" H 7950 5000 50  0001 C CNN
+F 3 "" H 7750 4900 50  0000 C CNN
+	1    7750 4900
+	-1   0    0    -1  
+$EndComp
+Text Label 7950 4900 0    60   ~ 0
+GATE3
+Text Label 7950 5600 0    60   ~ 0
+GATE1
+Text Label 9550 5200 0    60   ~ 0
+GATE1
+Text HLabel 8550 5050 1    60   Input ~ 0
+BATT_SEL1
+Text HLabel 8350 5300 3    60   Input ~ 0
+BATT_SEL3
+Text HLabel 8250 5200 0    60   Input ~ 0
+BATT_SEL2
+Wire Wire Line
+	8550 5050 8550 5100
+Connection ~ 8550 5100
+Connection ~ 8500 5300
+Connection ~ 8300 5200
+Text Label 7950 4250 0    60   ~ 0
+GATE2
+Text Label 9550 5300 0    60   ~ 0
+GATE2
+Text Label 9550 5400 0    60   ~ 0
+GATE3
+Text Notes 7400 5950 0    60   ~ 0
+Vgs max - 14v
+Text Notes 6850 5150 0    60   ~ 0
+Vgs max - 14v
+Text Label 9550 5100 0    60   ~ 0
+1S
+Text Notes 7200 3900 0    60   ~ 0
+Vgs max - 11v
+Text Notes 7200 4000 0    60   ~ 0
+Vgs min - 7.5V
+Text Notes 6850 5250 0    60   ~ 0
+Vgs min - 7.5V
+Text Notes 6750 3750 0    60   ~ 0
+Nfet with wide Vgs margins like SiA466EDJ
 $EndSCHEMATC
