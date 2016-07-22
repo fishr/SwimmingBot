@@ -73,67 +73,18 @@ F9 "AUX_3.3V_EN" I R 3600 1750 60
 $EndSheet
 Connection ~ 2300 1250
 $Sheet
-S 1100 2750 1600 4950
+S 1450 5400 1350 1300
 U 56D60FDB
 F0 "Digital" 60
 F1 "SwimmingBotV0.1-digital.sch" 60
-F2 "3.3V" I L 1100 2950 60 
-F3 "GND" I L 1100 3050 60 
-F4 "A0" I L 1100 6800 60 
-F5 "A1" I L 1100 6700 60 
-F6 "A2" I L 1100 6600 60 
-F7 "A3" I L 1100 6500 60 
-F8 "A4" I L 1100 6400 60 
-F9 "A5" I L 1100 6300 60 
-F10 "A6" I L 1100 6200 60 
-F11 "A7" I L 1100 6100 60 
-F12 "A8" I L 1100 6000 60 
-F13 "A9" I L 1100 5900 60 
-F14 "A10" I L 1100 5800 60 
-F15 "A11" I L 1100 5700 60 
-F16 "A12" I L 1100 5600 60 
-F17 "A13" I L 1100 5500 60 
-F18 "A14" I L 1100 5400 60 
-F19 "A15" I L 1100 5300 60 
-F20 "A16" I L 1100 5200 60 
-F21 "A17" I L 1100 5100 60 
-F22 "A18" I L 1100 5000 60 
-F23 "A19" I L 1100 4900 60 
-F24 "A20" I L 1100 4800 60 
-F25 "A21" I L 1100 4700 60 
-F26 "A22" I L 1100 4600 60 
-F27 "A23" I L 1100 4500 60 
-F28 "CE#_FLASH" I R 2700 3200 60 
-F29 "WE#" I L 1100 3900 60 
-F30 "CE#_RAM" I R 2700 2850 60 
-F31 "DQ0" I R 2700 6800 60 
-F32 "DQ1" I R 2700 6700 60 
-F33 "DQ2" I R 2700 6600 60 
-F34 "DQ3" I R 2700 6500 60 
-F35 "DQ4" I R 2700 6400 60 
-F36 "DQ5" I R 2700 6300 60 
-F37 "DQ6" I R 2700 6200 60 
-F38 "DQ7" I R 2700 6100 60 
-F39 "DQ8" I R 2700 6000 60 
-F40 "DQ9" I R 2700 5900 60 
-F41 "DQ10" I R 2700 5800 60 
-F42 "DQ11" I R 2700 5700 60 
-F43 "DQ12" I R 2700 5600 60 
-F44 "DQ13" I R 2700 5500 60 
-F45 "DQ14" I R 2700 5400 60 
-F46 "DQ15" I R 2700 5300 60 
-F47 "OE#" I L 1100 3700 60 
-F48 "CAS#" I L 1100 3600 60 
-F49 "RAS#" I L 1100 3500 60 
-F50 "CLK_RAM" I R 2700 3050 60 
-F51 "CKE_RAM" I R 2700 2950 60 
-F52 "RESET#_FLASH" I R 2700 3300 60 
-F53 "WAIT#_FLASH" I R 2700 3400 60 
-F54 "BL1#" I L 1100 4100 60 
-F55 "BL0#" I L 1100 4200 60 
-F56 "BA0" I L 1100 4400 60 
-F57 "BA1" I L 1100 4300 60 
-F58 "SDWE#" I L 1100 4000 60 
+F2 "3.3V" I L 1450 5600 60 
+F3 "GND" I L 1450 5700 60 
+F4 "CE#" I R 2800 5500 60 
+F5 "SIO1" I R 2800 5950 60 
+F6 "SIO2" I R 2800 6100 60 
+F7 "SIO3" I R 2800 6250 60 
+F8 "SCK" I R 2800 5650 60 
+F9 "SIO0" I R 2800 5800 60 
 $EndSheet
 $Sheet
 S 7650 800  1200 2050
@@ -243,92 +194,8 @@ Text Label 4400 2350 2    60   ~ 0
 A21
 Text Label 4400 2250 2    60   ~ 0
 A22
-Text Label 1100 6800 2    60   ~ 0
-A0
-Text Label 1100 6700 2    60   ~ 0
-A1
-Text Label 1100 6600 2    60   ~ 0
-A2
-Text Label 1100 6500 2    60   ~ 0
-A3
-Text Label 1100 6400 2    60   ~ 0
-A4
-Text Label 1100 6300 2    60   ~ 0
-A5
-Text Label 1100 6200 2    60   ~ 0
-A6
-Text Label 1100 6100 2    60   ~ 0
-A7
-Text Label 1100 6000 2    60   ~ 0
-A8
-Text Label 1100 5900 2    60   ~ 0
-A9
-Text Label 1100 5800 2    60   ~ 0
-A10
-Text Label 1100 5700 2    60   ~ 0
-A11
-Text Label 1100 5600 2    60   ~ 0
-A12
-Text Label 1100 5500 2    60   ~ 0
-A13
-Text Label 1100 5400 2    60   ~ 0
-A14
-Text Label 1100 5300 2    60   ~ 0
-A15
-Text Label 1100 5200 2    60   ~ 0
-A16
-Text Label 1100 5100 2    60   ~ 0
-A17
-Text Label 1100 5000 2    60   ~ 0
-A18
-Text Label 1100 4900 2    60   ~ 0
-A19
-Text Label 1100 4800 2    60   ~ 0
-A20
-Text Label 1100 4700 2    60   ~ 0
-A21
-Text Label 1100 4600 2    60   ~ 0
-A22
-Text Label 1100 4500 2    60   ~ 0
-A23
 Text Label 4400 2150 2    60   ~ 0
 A23
-Text Label 1100 4300 2    60   ~ 0
-A15
-Text Label 1100 4400 2    60   ~ 0
-A14
-Text Label 2700 6800 0    60   ~ 0
-D0
-Text Label 2700 6700 0    60   ~ 0
-D1
-Text Label 2700 6600 0    60   ~ 0
-D2
-Text Label 2700 6500 0    60   ~ 0
-D3
-Text Label 2700 6400 0    60   ~ 0
-D4
-Text Label 2700 6300 0    60   ~ 0
-D5
-Text Label 2700 6200 0    60   ~ 0
-D6
-Text Label 2700 6100 0    60   ~ 0
-D7
-Text Label 2700 6000 0    60   ~ 0
-D8
-Text Label 2700 5900 0    60   ~ 0
-D9
-Text Label 2700 5800 0    60   ~ 0
-D10
-Text Label 2700 5700 0    60   ~ 0
-D11
-Text Label 2700 5600 0    60   ~ 0
-D12
-Text Label 2700 5500 0    60   ~ 0
-D13
-Text Label 2700 5400 0    60   ~ 0
-D14
-Text Label 2700 5300 0    60   ~ 0
-D15
 Text Label 6550 4700 0    60   ~ 0
 D0
 Text Label 6550 4600 0    60   ~ 0
@@ -361,40 +228,20 @@ Text Label 6550 3300 0    60   ~ 0
 D14
 Text Label 6550 3200 0    60   ~ 0
 D15
-Text Label 2700 2850 0    60   ~ 0
-CE#_RAM
 Text Label 4400 4650 2    60   ~ 0
 CE#_RAM
-Text Label 2700 2950 0    60   ~ 0
-CKE_RAM
 Text Label 4400 4750 2    60   ~ 0
 CKE_RAM
-Text Label 1100 3500 2    60   ~ 0
-RAS#
 Text Label 4400 4850 2    60   ~ 0
 RAS#
 Text Label 6550 4800 0    60   ~ 0
 CLK_RAM
-Text Label 2700 3050 0    60   ~ 0
-CLK_RAM
 Text Label 6550 2900 0    60   ~ 0
 CE#_FLASH
-Text Label 2700 3200 0    60   ~ 0
-CE#_FLASH
-Text Label 2700 3400 0    60   ~ 0
-WAIT#_FLASH
 Text Label 4400 2050 2    60   ~ 0
 WAIT#_FLASH
 Text Label 4400 1950 2    60   ~ 0
 CAS#
-Text Label 1100 3600 2    60   ~ 0
-CAS#
-Text Label 1100 4000 2    60   ~ 0
-SDWE#
-Text Label 1100 3700 2    60   ~ 0
-OE#
-Text Label 1100 3900 2    60   ~ 0
-WE#
 Text Label 6550 3100 0    60   ~ 0
 OE#
 Text Label 6550 3000 0    60   ~ 0
@@ -405,10 +252,6 @@ Text Label 6550 4900 0    60   ~ 0
 BL0#
 Text Label 6550 5000 0    60   ~ 0
 BL1#
-Text Label 1100 4100 2    60   ~ 0
-BL1#
-Text Label 1100 4200 2    60   ~ 0
-BL0#
 Text Label 9900 1350 2    60   ~ 0
 RF_RX
 Text Label 4400 1300 2    60   ~ 0
@@ -442,7 +285,7 @@ Text Label 9900 1200 2    60   ~ 0
 GND
 Text Label 9450 4550 2    60   ~ 0
 GND
-Text Label 1100 3050 2    60   ~ 0
+Text Label 1450 5700 2    60   ~ 0
 GND
 Text Label 3600 900  0    60   ~ 0
 PROC_3.3V
@@ -474,7 +317,7 @@ Text Label 9900 1050 2    60   ~ 0
 GEN_3.3V
 Text Label 9450 4450 2    60   ~ 0
 GEN_3.3V
-Text Label 1100 2950 2    60   ~ 0
+Text Label 1450 5600 2    60   ~ 0
 GEN_3.3V
 Text Label 7650 1700 2    60   ~ 0
 MOT1_CS#
@@ -528,8 +371,6 @@ Text Label 6550 5850 0    60   ~ 0
 MOT1_RST#
 Text Label 6550 6050 0    60   ~ 0
 MOT2_RST#
-Text Label 2700 3300 0    60   ~ 0
-FLASH_RST#
 Text Label 4400 6700 2    60   ~ 0
 FLASH_RST#
 Text Label 1750 1900 0    60   ~ 0
@@ -843,7 +684,9 @@ F 3 "" H 7750 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7300 4400 7750 4400
+	7300 4400 7450 4400
+Wire Wire Line
+	7450 4400 7750 4400
 Connection ~ 7450 4400
 Text Label 7300 4400 0    60   ~ 0
 PROC_3.3V
@@ -864,7 +707,9 @@ GND
 Wire Wire Line
 	1750 1550 2600 1550
 Wire Wire Line
-	1750 1250 2600 1250
+	1750 1250 2300 1250
+Wire Wire Line
+	2300 1250 2600 1250
 $Sheet
 S 1000 800  750  1800
 U 56CE10CB
