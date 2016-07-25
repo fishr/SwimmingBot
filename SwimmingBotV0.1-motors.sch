@@ -956,10 +956,8 @@ Wire Notes Line
 	3700 700  3700 2800
 Wire Notes Line
 	750  2800 750  700 
-Text Label 2850 1250 2    60   ~ 0
-VBAT
 Text Label 2850 2300 2    60   ~ 0
-VBAT
+VFIN
 Text Label 2850 1350 2    60   ~ 0
 GND
 Text Label 2850 2400 2    60   ~ 0
@@ -1085,40 +1083,26 @@ F 3 "" H 3500 4750 50  0000 C CNN
 	1    3500 4750
 	1    0    0    -1  
 $EndComp
-$Comp
-L C C64
-U 1 1 574E8796
-P 3700 4750
-F 0 "C64" H 3725 4850 50  0000 L CNN
-F 1 "1uF" H 3725 4650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 3738 4600 50  0001 C CNN
-F 3 "" H 3700 4750 50  0000 C CNN
-	1    3700 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C65
-U 1 1 574E881F
-P 3900 4750
-F 0 "C65" H 3925 4850 50  0000 L CNN
-F 1 "1uF" H 3925 4650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 3938 4600 50  0001 C CNN
-F 3 "" H 3900 4750 50  0000 C CNN
-	1    3900 4750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3150 4600 3900 4600
-Connection ~ 3700 4600
 Connection ~ 3500 4600
-Wire Wire Line
-	3150 4900 3900 4900
 Connection ~ 3500 4900
-Connection ~ 3700 4900
 Connection ~ 3300 4600
 Connection ~ 3300 4900
 Text Label 3150 4600 0    60   ~ 0
 VBAT
 Text Label 3150 4900 0    60   ~ 0
 GND
+Text Notes 1150 950  0    60   ~ 0
+SERVOS CAN'T RUN ON FULL 2S  *CRIES*
+Text Label 2850 1250 2    60   ~ 0
+VFIN
+Text HLabel 2100 1650 0    60   Input ~ 0
+VFIN
+Wire Wire Line
+	2100 1650 2200 1650
+Text Label 2200 1650 0    60   ~ 0
+VFIN
+Wire Wire Line
+	3150 4600 3500 4600
+Wire Wire Line
+	3150 4900 3500 4900
 $EndSCHEMATC

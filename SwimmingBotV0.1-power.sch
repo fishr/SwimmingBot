@@ -45,15 +45,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Notes Line
-	1150 1000 1150 3450
+	700  1000 700  3450
 Wire Notes Line
 	1150 3450 3750 3450
 Wire Notes Line
-	3750 3450 3750 1000
+	4350 3450 4350 1000
 Wire Notes Line
 	3750 1000 1150 1000
 Text Notes 2000 900  0    60   ~ 0
-Motor Regulation?
+Motor Regulation
 Wire Notes Line
 	5250 900  5250 5800
 Wire Notes Line
@@ -90,8 +90,6 @@ Text Label 2050 5250 2    60   ~ 0
 1S
 Text Label 2050 4950 2    60   ~ 0
 2S
-Text Notes 6300 1200 0    60   ~ 0
-what voltages needed?\nwhat current?\n
 Text Notes 8100 1400 0    60   ~ 0
 minimum 3.3v@600mA, go for 750mA?
 Text HLabel 8900 1800 2    60   Input ~ 0
@@ -126,10 +124,10 @@ Wire Wire Line
 Wire Wire Line
 	7350 3850 8150 3850
 $Comp
-L GND #PWR02
+L GND #PWR2
 U 1 1 575451D8
 P 5750 5100
-F 0 "#PWR02" H 5750 4850 50  0001 C CNN
+F 0 "#PWR2" H 5750 4850 50  0001 C CNN
 F 1 "GND" H 5750 4950 50  0000 C CNN
 F 2 "" H 5750 5100 50  0000 C CNN
 F 3 "" H 5750 5100 50  0000 C CNN
@@ -451,10 +449,10 @@ $EndComp
 Connection ~ 6100 1800
 Connection ~ 6100 2100
 $Comp
-L PWR_FLAG #FLG03
+L PWR_FLAG #FLG1
 U 1 1 5759624D
 P 10300 3850
-F 0 "#FLG03" H 10300 3945 50  0001 C CNN
+F 0 "#FLG1" H 10300 3945 50  0001 C CNN
 F 1 "PWR_FLAG" H 10300 4030 50  0000 C CNN
 F 2 "" H 10300 3850 50  0000 C CNN
 F 3 "" H 10300 3850 50  0000 C CNN
@@ -462,10 +460,10 @@ F 3 "" H 10300 3850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
+L R R7
 U 1 1 57477723
 P 6300 4600
-F 0 "R?" V 6380 4600 50  0000 C CNN
+F 0 "R7" V 6380 4600 50  0000 C CNN
 F 1 "10k" V 6300 4600 50  0000 C CNN
 F 2 "Resistors_SMD:R_0402" V 6230 4600 50  0001 C CNN
 F 3 "" H 6300 4600 50  0000 C CNN
@@ -483,4 +481,169 @@ Wire Wire Line
 	6150 4200 6050 4200
 Wire Wire Line
 	6050 4200 6050 3850
+Text HLabel 4000 2000 2    60   Input ~ 0
+VFIN
+$Comp
+L CP C11
+U 1 1 579CADAB
+P 3750 2150
+F 0 "C11" H 3775 2250 50  0000 L CNN
+F 1 "10uF" H 3775 2050 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_HandSoldering" H 3788 2000 50  0001 C CNN
+F 3 "" H 3750 2150 50  0000 C CNN
+	1    3750 2150
+	1    0    0    -1  
+$EndComp
+Text Label 4050 2300 0    60   ~ 0
+GND
+$Comp
+L TPS6216X U9
+U 1 1 579CADB2
+P 2300 2050
+F 0 "U9" H 2300 2050 60  0000 C CNN
+F 1 "TPS6216X" H 2250 2300 60  0000 C CNN
+F 2 "Custom_Footprints:WSON-8" H 2300 2050 60  0001 C CNN
+F 3 "" H 2300 2050 60  0000 C CNN
+	1    2300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR L3
+U 1 1 579CADB8
+P 3100 2000
+F 0 "L3" V 3050 2000 50  0000 C CNN
+F 1 "2.2uH" V 3200 2000 50  0000 C CNN
+F 2 "Inductors:NR4018" H 3100 2000 50  0001 C CNN
+F 3 "" H 3100 2000 50  0000 C CNN
+	1    3100 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2800 2000 2750 2000
+Wire Wire Line
+	2750 2100 3400 2100
+Wire Wire Line
+	3400 2100 3400 2000
+Wire Wire Line
+	2750 1900 2850 1900
+Text HLabel 2850 1900 2    60   Input ~ 0
+VFIN_GOOD
+$Comp
+L CP C10
+U 1 1 579CADC3
+P 3500 2150
+F 0 "C10" H 3525 2250 50  0000 L CNN
+F 1 "10uF" H 3525 2050 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_HandSoldering" H 3538 2000 50  0001 C CNN
+F 3 "" H 3500 2150 50  0000 C CNN
+	1    3500 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2300 4050 2300
+Connection ~ 3750 2300
+Wire Wire Line
+	3400 2000 4000 2000
+Connection ~ 3500 2000
+Connection ~ 3750 2000
+Connection ~ 3400 2000
+$Comp
+L C C12
+U 1 1 579CADCF
+P 3950 2150
+F 0 "C12" H 3975 2250 50  0000 L CNN
+F 1 "1uF" H 3975 2050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 3988 2000 50  0001 C CNN
+F 3 "" H 3950 2150 50  0000 C CNN
+	1    3950 2150
+	1    0    0    1   
+$EndComp
+Connection ~ 3950 2000
+Connection ~ 3950 2300
+Connection ~ 3500 2300
+Wire Wire Line
+	1800 1900 1550 1900
+Wire Wire Line
+	1550 1900 1550 2300
+Wire Wire Line
+	1550 2200 1800 2200
+Text Label 1600 2200 0    60   ~ 0
+GND
+Text Label 1250 2000 2    60   ~ 0
+2S
+Wire Wire Line
+	1800 2100 1700 2100
+Text HLabel 1700 2100 0    60   Input ~ 0
+VFIN_EN
+$Comp
+L CP C7
+U 1 1 579CADE1
+P 950 2150
+F 0 "C7" H 975 2250 50  0000 L CNN
+F 1 "10uF" H 975 2050 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_HandSoldering" H 988 2000 50  0001 C CNN
+F 3 "" H 950 2150 50  0000 C CNN
+	1    950  2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  2000 1800 2000
+Wire Wire Line
+	1550 2300 950  2300
+Connection ~ 1550 2200
+$Comp
+L C C9
+U 1 1 579CADEA
+P 1200 2150
+F 0 "C9" H 1225 2250 50  0000 L CNN
+F 1 "100nF" H 1225 2050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 1238 2000 50  0001 C CNN
+F 3 "" H 1200 2150 50  0000 C CNN
+	1    1200 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1200 2000
+Connection ~ 1200 2300
+$Comp
+L R R6
+U 1 1 579CBA98
+P 3200 2300
+F 0 "R6" V 3280 2300 50  0000 C CNN
+F 1 "10k" V 3200 2300 50  0000 C CNN
+F 2 "" V 3130 2300 50  0000 C CNN
+F 3 "" H 3200 2300 50  0000 C CNN
+	1    3200 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R5
+U 1 1 579CBAF5
+P 3200 2200
+F 0 "R5" V 3280 2200 50  0000 C CNN
+F 1 "65k" V 3200 2200 50  0000 C CNN
+F 2 "" V 3130 2200 50  0000 C CNN
+F 3 "" H 3200 2200 50  0000 C CNN
+	1    3200 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 2100 3350 2200
+Connection ~ 3350 2100
+Wire Wire Line
+	3050 2300 3050 2200
+Wire Wire Line
+	2750 2200 3000 2200
+Wire Wire Line
+	3000 2200 3000 2250
+Wire Wire Line
+	3000 2250 3050 2250
+Connection ~ 3050 2250
+Text Notes 1600 2600 0    60   ~ 0
+chip is different, all else is same
+Text Notes 2100 2800 0    60   ~ 0
+tps62160dsg
+Text Notes 6800 2250 0    60   ~ 0
+TPS62162DSG
+Text Notes 6250 2450 0    60   ~ 0
+the xxxxxx2 version is fixed 3.3v, the xxxxxxx0 version is adjustable
 $EndSCHEMATC

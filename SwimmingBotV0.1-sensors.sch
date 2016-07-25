@@ -34,7 +34,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 8
+Sheet 6 8
 Title ""
 Date ""
 Rev ""
@@ -197,8 +197,6 @@ Wire Wire Line
 Wire Wire Line
 	7000 2800 7000 2700
 Connection ~ 6550 1900
-NoConn ~ 7500 2700
-NoConn ~ 6800 2700
 Text Label 6650 2800 0    60   ~ 0
 GND
 $Comp
@@ -220,7 +218,7 @@ Connection ~ 6900 2800
 Text Label 7200 3100 0    60   ~ 0
 3.3V
 Text HLabel 7400 2750 3    60   Input ~ 0
-SD_CD
+SD_DAT3/CD
 Text HLabel 7300 2750 3    60   Input ~ 0
 SD_CMD
 Text HLabel 7100 2750 3    60   Input ~ 0
@@ -251,4 +249,12 @@ Text Label 2350 1600 1    60   ~ 0
 AUX_SDA
 Text Notes 2550 1350 0    60   ~ 0
 AUX_ I2C lines can be communicated with\nautomagically by the mpu9250\nsaving processor time by consolidating reads
+Text HLabel 6800 2750 3    60   Input ~ 0
+SD_DAT1
+Text HLabel 7500 2750 3    60   Input ~ 0
+SD_DAT2
+Wire Wire Line
+	7500 2750 7500 2700
+Wire Wire Line
+	6800 2750 6800 2700
 $EndSCHEMATC
