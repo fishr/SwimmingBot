@@ -540,7 +540,7 @@ $EndComp
 Wire Wire Line
 	8650 5400 8650 5650
 Wire Wire Line
-	8500 5600 8650 5600
+	8500 5600 8850 5600
 Connection ~ 8650 5600
 Wire Wire Line
 	8650 5100 8400 5100
@@ -605,4 +605,25 @@ Text Notes 6850 5250 0    60   ~ 0
 Vgs min - 7.5V
 Text Notes 6750 3750 0    60   ~ 0
 Nfet with wide Vgs margins like SiA466EDJ
+$Comp
+L C C13
+U 1 1 57A2F2D2
+P 9100 5650
+F 0 "C13" H 9125 5750 50  0000 L CNN
+F 1 "100nF" H 9125 5550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 9138 5500 50  0001 C CNN
+F 3 "" H 9100 5650 50  0000 C CNN
+	1    9100 5650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 5100 9850 5100
+Wire Wire Line
+	9850 5100 9850 5650
+Wire Wire Line
+	9850 5650 9250 5650
+Wire Wire Line
+	8950 5650 8850 5650
+Wire Wire Line
+	8850 5650 8850 5600
 $EndSCHEMATC
