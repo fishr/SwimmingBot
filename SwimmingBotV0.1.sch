@@ -47,10 +47,10 @@ $EndDescr
 Text Label 2100 1250 2    60   ~ 0
 GND
 $Comp
-L GND #PWR1
+L GND #PWR01
 U 1 1 56CE2486
 P 2300 1250
-F 0 "#PWR1" H 2300 1000 50  0001 C CNN
+F 0 "#PWR01" H 2300 1000 50  0001 C CNN
 F 1 "GND" H 2300 1100 50  0000 C CNN
 F 2 "" H 2300 1250 50  0000 C CNN
 F 3 "" H 2300 1250 50  0000 C CNN
@@ -228,7 +228,7 @@ Text Label 7650 1700 2    60   ~ 0
 MOT1_CS#
 Text Label 7650 1800 2    60   ~ 0
 MOT2_CS#
-Text Label 4400 6900 2    60   ~ 0
+Text Label 6550 5650 0    60   ~ 0
 MOT2_CS#
 Text Label 4400 7100 2    60   ~ 0
 MOT1_CS#
@@ -272,24 +272,20 @@ Text Label 7650 2000 2    60   ~ 0
 MOT1_RST#
 Text Label 7650 2100 2    60   ~ 0
 MOT2_RST#
-Text Label 6550 5850 0    60   ~ 0
+Text Label 6550 5550 0    60   ~ 0
 MOT1_RST#
-Text Label 6550 6050 0    60   ~ 0
+Text Label 6550 5450 0    60   ~ 0
 MOT2_RST#
 Text Label 1750 1900 0    60   ~ 0
 CHG_STAT1
 Text Label 1750 2000 0    60   ~ 0
 CHG_STAT2
-Text Label 1750 2100 0    60   ~ 0
-CHG_TE#
 Text Label 1750 2200 0    60   ~ 0
 CHG_EN#
 Text Label 4400 7300 2    60   ~ 0
 CHG_STAT1
 Text Label 6550 6700 0    60   ~ 0
 CHG_STAT2
-Text Label 6550 6150 0    60   ~ 0
-CHG_TE#
 Text Label 4400 7200 2    60   ~ 0
 CHG_EN#
 Text Label 9450 5350 2    60   ~ 0
@@ -310,10 +306,6 @@ Text Label 9450 5650 2    60   ~ 0
 SD_DETECT
 Text Label 4400 6500 2    60   ~ 0
 SD_DETECT
-Text Label 1750 1100 0    60   ~ 0
-2S_EN
-Text Label 6550 6250 0    60   ~ 0
-2S_EN
 $Sheet
 S 4400 600  2150 7100
 U 56DF660D
@@ -468,7 +460,7 @@ Text Label 6550 5950 0    60   ~ 0
 MOT2_DIAG
 Text Label 1750 1700 0    60   ~ 0
 5V_CHG
-Text Label 6550 7000 0    60   ~ 0
+Text Label 6550 6250 0    60   ~ 0
 5V_CHG
 Text Label 8300 5400 0    60   ~ 0
 SDA
@@ -478,7 +470,7 @@ NoConn ~ 9450 6150
 NoConn ~ 9450 6250
 Text Label 3600 1750 0    60   ~ 0
 AUX_3.3V_EN
-Text Label 6550 6900 0    60   ~ 0
+Text Label 4400 6700 2    60   ~ 0
 AUX_3.3V_EN
 Text Label 8300 5200 0    60   ~ 0
 GYRO_INT
@@ -578,14 +570,12 @@ S 1000 800  750  1800
 U 56CE10CB
 F0 "Charge" 60
 F1 "SwimmingBotV0.1-charge.sch" 60
-F2 "2S_EN" I R 1750 1100 60 
 F3 "GND" O R 1750 1250 60 
 F4 "1S" O R 1750 1400 60 
 F5 "2S" O R 1750 1550 60 
 F6 "5V_CHG" O R 1750 1700 60 
 F7 "CHG_STAT1" I R 1750 1900 60 
 F8 "CHG_STAT2" I R 1750 2000 60 
-F9 "CHG_TE#" I R 1750 2100 60 
 F10 "CHG_EN#" I R 1750 2200 60 
 F11 "BATT_SEL1" I R 1750 2350 60 
 F12 "BATT_SEL3" I R 1750 2550 60 
@@ -599,7 +589,7 @@ U 1 1 575ED442
 P 6800 7400
 F 0 "P2" H 6800 7650 50  0000 C CNN
 F 1 "ANALOG" V 6900 7400 50  0000 C CNN
-F 2 "Custom_Footprints:PICO-EZMATE-4" H 6800 7400 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x02_Pitch2.00mm" H 6800 7400 50  0001 C CNN
 F 3 "" H 6800 7400 50  0000 C CNN
 	1    6800 7400
 	1    0    0    -1  
@@ -692,7 +682,7 @@ Text Label 4400 1100 2    60   ~ 0
 RF_CTS
 Text Label 9900 2550 2    60   ~ 0
 RF_TXE
-Text Label 4400 6600 2    60   ~ 0
+Text Label 6550 5350 0    60   ~ 0
 RF_TXE
 NoConn ~ 9900 2400
 $Comp
@@ -701,7 +691,7 @@ U 1 1 579C12FF
 P 7500 3950
 F 0 "C6" H 7525 4050 50  0000 L CNN
 F 1 "1uF" H 7525 3850 50  0000 L CNN
-F 2 "" H 7538 3800 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0402" H 7538 3800 50  0001 C CNN
 F 3 "" H 7500 3950 50  0000 C CNN
 	1    7500 3950
 	1    0    0    -1  
@@ -718,13 +708,13 @@ Text Label 3600 1950 0    60   ~ 0
 VFIN
 Text Label 3600 2150 0    60   ~ 0
 VFIN_EN
-Text Label 4400 6700 2    60   ~ 0
+Text Label 6550 6900 0    60   ~ 0
 VFIN_EN
 Text Label 3600 1650 0    60   ~ 0
 AUX_3.3V_GOOD
 Text Label 4400 6800 2    60   ~ 0
 AUX_3.3V_GOOD
-Text Label 4400 7600 2    60   ~ 0
+Text Label 6550 5850 0    60   ~ 0
 AUX_VFIN_GOOD
 Text Label 3600 2050 0    60   ~ 0
 AUX_VFIN_GOOD
@@ -744,14 +734,14 @@ Text Label 1750 2450 0    60   ~ 0
 BATT_SEL2
 Text Label 1750 2550 0    60   ~ 0
 BATT_SEL3
-Text Label 6550 5650 0    60   ~ 0
+Text Label 4400 6900 2    60   ~ 0
 BATT_SEL1
-Text Label 6550 5550 0    60   ~ 0
+Text Label 6550 6150 0    60   ~ 0
 BATT_SEL2
-Text Label 6550 5450 0    60   ~ 0
+Text Label 6550 6050 0    60   ~ 0
 BATT_SEL3
-NoConn ~ 6550 5350
 NoConn ~ 6550 5250
 NoConn ~ 6550 5750
 NoConn ~ 4400 6400
+NoConn ~ 6550 7000
 $EndSCHEMATC
