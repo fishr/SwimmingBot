@@ -228,11 +228,11 @@ Text Label 7650 1700 2    60   ~ 0
 MOT1_CS#
 Text Label 7650 1800 2    60   ~ 0
 MOT2_CS#
-Text Label 6550 5650 0    60   ~ 0
+Text Label 6550 5750 0    60   ~ 0
 MOT2_CS#
 Text Label 4400 7100 2    60   ~ 0
 MOT1_CS#
-Text Label 4400 7400 2    60   ~ 0
+Text Label 6550 5450 0    60   ~ 0
 RF_CRESP#
 Text Label 9900 1800 2    60   ~ 0
 RF_EX
@@ -244,7 +244,7 @@ Text Label 9900 1650 2    60   ~ 0
 RF_CRESP#
 Text Label 4400 7500 2    60   ~ 0
 RF_EX
-Text Label 6550 6500 0    60   ~ 0
+Text Label 6550 5250 0    60   ~ 0
 RF_CMD#
 Text Label 6550 6600 0    60   ~ 0
 RF_PWR_DWN#
@@ -254,7 +254,7 @@ Text Label 9450 5050 2    60   ~ 0
 GYRO_FSYNC
 Text Label 6550 6350 0    60   ~ 0
 GYRO_FSYNC
-Text Label 4400 6100 2    60   ~ 0
+Text Label 6550 7000 0    60   ~ 0
 GYRO_INT
 Text Label 7650 1400 2    60   ~ 0
 MOSI
@@ -274,7 +274,7 @@ Text Label 7650 2100 2    60   ~ 0
 MOT2_RST#
 Text Label 6550 5550 0    60   ~ 0
 MOT1_RST#
-Text Label 6550 5450 0    60   ~ 0
+Text Label 4400 6400 2    60   ~ 0
 MOT2_RST#
 Text Label 1750 1900 0    60   ~ 0
 CHG_STAT1
@@ -304,7 +304,7 @@ Text Label 9450 5250 2    60   ~ 0
 SD_DAT3/CD
 Text Label 9450 5650 2    60   ~ 0
 SD_DETECT
-Text Label 4400 6500 2    60   ~ 0
+Text Label 4400 7000 2    60   ~ 0
 SD_DETECT
 $Sheet
 S 4400 600  2150 7100
@@ -442,7 +442,7 @@ Wire Wire Line
 	7200 1150 7100 1150
 Text Label 7100 1250 0    60   ~ 0
 GND
-Text Label 4400 7600 2    60   ~ 0
+Text Label 6550 6500 0    60   ~ 0
 EXT1
 Text Label 4400 6300 2    60   ~ 0
 EXT2
@@ -454,7 +454,7 @@ Text Label 8850 1400 0    60   ~ 0
 MOT1_DIAG
 Text Label 8850 1500 0    60   ~ 0
 MOT2_DIAG
-Text Label 4400 7000 2    60   ~ 0
+Text Label 4400 6500 2    60   ~ 0
 MOT1_DIAG
 Text Label 6550 5950 0    60   ~ 0
 MOT2_DIAG
@@ -682,7 +682,7 @@ Text Label 4400 1100 2    60   ~ 0
 RF_CTS
 Text Label 9900 2550 2    60   ~ 0
 RF_TXE
-Text Label 6550 5350 0    60   ~ 0
+Text Label 6550 5650 0    60   ~ 0
 RF_TXE
 NoConn ~ 9900 2400
 $Comp
@@ -708,13 +708,13 @@ Text Label 3600 1950 0    60   ~ 0
 VFIN
 Text Label 3600 2150 0    60   ~ 0
 VFIN_EN
-Text Label 6550 6900 0    60   ~ 0
+Text Label 6550 5850 0    60   ~ 0
 VFIN_EN
 Text Label 3600 1650 0    60   ~ 0
 AUX_3.3V_GOOD
 Text Label 4400 6800 2    60   ~ 0
 AUX_3.3V_GOOD
-Text Label 6550 5850 0    60   ~ 0
+Text Label 6550 6900 0    60   ~ 0
 AUX_VFIN_GOOD
 Text Label 3600 2050 0    60   ~ 0
 AUX_VFIN_GOOD
@@ -740,8 +740,43 @@ Text Label 6550 6150 0    60   ~ 0
 BATT_SEL2
 Text Label 6550 6050 0    60   ~ 0
 BATT_SEL3
-NoConn ~ 6550 5250
-NoConn ~ 6550 5750
-NoConn ~ 4400 6400
-NoConn ~ 6550 7000
+Text Label 9550 3950 2    60   ~ 0
+GND
+Text Label 9550 3350 2    60   ~ 0
+EXT3
+Text Label 9550 3450 2    60   ~ 0
+EXT4
+Text Label 9550 3550 2    60   ~ 0
+EXT5
+Text Label 9550 3650 2    60   ~ 0
+EXT6
+Text Label 9550 3750 2    60   ~ 0
+EXT7
+Text Label 9550 3850 2    60   ~ 0
+EXT8
+Text Label 4400 7600 2    60   ~ 0
+EXT3
+Text Label 4400 7400 2    60   ~ 0
+EXT4
+Text Label 4400 6600 2    60   ~ 0
+EXT5
+Text Label 4400 6100 2    60   ~ 0
+EXT6
+Text Label 6550 5350 0    60   ~ 0
+EXT7
+Text Label 6550 6700 0    60   ~ 0
+EXT8
+$Comp
+L CONN_01X08 P5
+U 1 1 579A90D9
+P 9750 3600
+F 0 "P5" H 9750 4050 50  0000 C CNN
+F 1 "CONN_01X08" V 9850 3600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x04_Pitch1.27mm" H 9750 3600 50  0001 C CNN
+F 3 "" H 9750 3600 50  0000 C CNN
+	1    9750 3600
+	1    0    0    -1  
+$EndComp
+Text Label 9550 3250 2    60   ~ 0
+GEN_3.3V
 $EndSCHEMATC
